@@ -688,8 +688,8 @@ class ParsedModel(object):
         return cls(tokens['constants'], tokens['rates'],
                    tokens['species'], tokens['populations'],
                    [t['file'] for t in tokens['obsfile']],
-                   tokens['algorithm']['alg'],
-                   tokens['conffile']['file'] if 'conffile' in tokens else None,
+                   tokens['algorithm'][2],
+                   tokens['conffile'][2] if 'conffile' in tokens else None,
                    tokens['observables'] if 'observables' in tokens else [])
     
     @staticmethod
